@@ -21,7 +21,7 @@ all:	$(NAME)
 
 $(NAME):	$(OBJ)
 	make -C./lib/my
-	$(CC) -o $(NAME) $(OBJ)
+	$(CC) -o $(NAME) $(OBJ) $(CPPFLAGS)
 
 clean:
 	make clean -C./lib/my

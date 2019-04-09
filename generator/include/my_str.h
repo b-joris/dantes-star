@@ -14,5 +14,7 @@ unsigned int my_strlen(char *str);
 char *my_strdup(char *str);
 void my_revstr(char *str);
 char *my_strcat(char *s1, char *s2);
+int my_isnum(const char *number);
+int my_puterror(char *str);
 
 #endif /* !MY_STR_H_ */
