@@ -8,8 +8,8 @@
 #ifndef GENERATOR_H_
 #define GENERATOR_H_
 
-#define WALL '|'
-#define PATH 'o'
+#define WALL 'X'
+#define PATH '*'
 #define POS(Y, X, WIDTH) ((Y * (WIDTH + 1)) + X)
 
 enum {
