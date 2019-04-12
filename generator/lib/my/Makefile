@@ -9,7 +9,8 @@ NAME	=	libmy.a
 
 SRC	=	$(wildcard ./csfml/*.c)		\
 		$(wildcard ./pointer/*.c)	\
-		$(wildcard ./str/*.c)
+		$(wildcard ./str/*.c)		\
+		$(wildcard ./list/*.c)
 
 OBJ	=	$(SRC:.c=.o)
 

@@ -28,7 +28,7 @@ typedef struct s_maze {
     int width;
     int height;
     int perfect;
-    char **grid;
+    char *grid;
 
 } maze_t;
 
