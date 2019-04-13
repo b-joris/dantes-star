@@ -78,6 +78,8 @@ int main(int ac, char **av)
     if (set_maze(ac, av, maze))
         return (0);
     maze->perfect ? perfect(maze) : imperfect(maze);
+    maze->grid[maze->height - 1][maze->width - 2] = PATH;
+    maze->grid[maze->height - 1][maze->width - 1] = PATH;
     display_maze(maze);
     free_maze(maze);
     return (0);

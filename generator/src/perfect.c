@@ -23,6 +23,5 @@ int perfect(maze_t *maze)
             maze->grid[i][maze->height - 1] = PATH : WALL;
     }
     maze->grid[maze->height - 2][maze->width - 1] = WALL;
-    maze->grid[maze->height - 1][maze->width - 1] = PATH;
     return (0);
 }

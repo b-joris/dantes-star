@@ -77,5 +77,6 @@ int generator(maze_t *maze)
             my_free(paths);
         }
     }
+    free_list(maze->list);
     return (0);
 }
