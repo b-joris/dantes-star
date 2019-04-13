@@ -8,8 +8,10 @@
 #ifndef GENERATOR_H_
 #define GENERATOR_H_
 
-#define WALL 'X'
-#define PATH '*'
+#include "my_list.h"
+
+#define WALL '|'
+#define PATH '.'
 #define POS(Y, X, WIDTH) ((Y * (WIDTH + 1)) + X)
 
 enum {
@@ -28,8 +30,15 @@ typedef struct s_maze {
     int width;
     int height;
     int perfect;
-    char *grid;
+    int x;
+    int y;
+    char **grid;
+    list_t *list;
 
 } maze_t;
+
+int generator(maze_t *maze);
+int perfect(maze_t *maze);
+int imperfect(maze_t *maze);
 
 #endif /* !GENERATOR_H_ */
