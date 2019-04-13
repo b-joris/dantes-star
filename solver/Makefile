@@ -15,22 +15,22 @@ OBJ	=	$(SRC:.c=.o)
 
 NAME	=	solver
 
-CFLAGS	=	-Wall -Wextra -g3
+CFLAGS	=	-Wall -Wextra
 
-CPPFLAGS	=	-I./include -lmy -L./lib/my -g3
+CPPFLAGS	=	-I../include -lmy -L../lib/my
 
 all:	$(NAME)
 
 $(NAME):	$(OBJ)
-	make -C./lib/my
-	$(CC) -o $(NAME) $(OBJ)
+	make -C../lib/my
+	$(CC) -o $(NAME) $(OBJ) $(CPPFLAGS)
 
 clean:
-	make clean -C./lib/my
+	make clean -C../lib/my
 	rm -f $(OBJ)
 
 fclean:	clean
-	make fclean -C./lib/my
+	make fclean -C../lib/my
 	rm -f $(NAME)
 
 re:	fclean all
