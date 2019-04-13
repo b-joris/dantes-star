@@ -7,7 +7,10 @@
 
 CC	=	gcc
 
-SRC	=	./src/main.c
+SRC	=	./src/main.c		\
+		./src/generator.c	\
+		./src/perfect.c		\
+		./src/imperfect.c
 
 OBJ	=	$(SRC:.c=.o)
 

@@ -5,8 +5,10 @@
 ** sprites
 */
 
+#include <stdlib.h>
 #include <SFML/Graphics.h>
 #include "my_csfml.h"
+#include "my_pointer.h"
 
 sprite_t *create_sprite(char *path, int id, int x, int y)
 {
@@ -20,6 +22,7 @@ sprite_t *create_sprite(char *path, int id, int x, int y)
         return (NULL);
     sprite->pos->top = y;
     sprite->pos->left = x;
+    sprite->id = id;
     sfSprite_setTexture(sprite->sprite, sprite->texture, sfTrue);
     return (sprite);
 }
