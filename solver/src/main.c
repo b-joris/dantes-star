@@ -62,8 +62,11 @@ void set_struct_maze(struct maze *maze)
 
 void print_solution(struct  maze *maze)
 {
-    for(unsigned long i = 0; i < maze->map_size_rows; i++)
-        printf("%s\n", maze->map[i]);
+    for (unsigned long i = 0; i != maze->map_size_rows; i++) {
+        printf("%s", maze->map[i]);
+        if (i != maze->map_size_rows - 1)
+            printf("\n");
+    }
 }
 
 unsigned long solvemaze(struct maze *maze, unsigned long r, unsigned long c)
