@@ -7,15 +7,17 @@
 
 CC	=	gcc
 
-SRC	=	./src/main.c
+SRC	=	./src/main.c	\
+		./src/my_strlen.c	\
+		./src/str_word_totab.c	\
 
 OBJ	=	$(SRC:.c=.o)
 
 NAME	=	solver
 
-CFLAGS	=	-Wall -Wextra
+CFLAGS	=	-Wall -Wextra -g3
 
-CPPFLAGS	=	-I./include -lmy -L./lib/my
+CPPFLAGS	=	-I./include -lmy -L./lib/my -g3
 
 all:	$(NAME)
 

@@ -15,7 +15,7 @@ NAME	=	generator
 
 CFLAGS	=	-Wall -Wextra
 
-CPPFLAGS	=	-I./include -lmy -L./lib/my
+CPPFLAGS	=	-I./include -lmy -L./lib/my -g3
 
 all:	$(NAME)
 
