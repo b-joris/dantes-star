@@ -8,7 +8,6 @@
 NAME	=	libmy.a
 
 SRC	=	$(wildcard ./list/*.c)		\
-		$(wildcard ./csfml/*.c)		\
 		$(wildcard ./pointer/*.c)	\
 		$(wildcard ./str/*.c)		\
 

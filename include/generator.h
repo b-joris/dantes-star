@@ -39,5 +39,6 @@ typedef struct s_maze {
 int generator(maze_t *maze);
 int perfect(maze_t *maze);
 int imperfect(maze_t *maze);
+int set_maze(int ac, char **av, maze_t *maze);
 
 #endif /* !GENERATOR_H_ */

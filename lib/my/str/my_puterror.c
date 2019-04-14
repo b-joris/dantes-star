@@ -6,7 +6,14 @@
 */
 
 #include <unistd.h>
-#include "my_str.h"
+
+static unsigned int my_strlen(char *str)
+{
+    unsigned int i = 0;
+
+    for (; str && str[i]; i++);
+    return (i);
+}
 
 int my_puterror(char *str)
 {
