@@ -45,21 +45,8 @@ static void replace_chars_solved(maze_t *maze)
     maze->grid[size - 1] = 'o';
 }
 
-int main(int ac, char **av)
+static int maze_algo(maze_t *maze)
 {
-    maze_t *maze = malloc(sizeof(maze_t));
-
-    if (!maze)
-        return (my_puterror("Malloc error\n"));
-    if (ac != 2) {
-        free(maze);
-        return (my_puterror("Argument error\n"));
-    }
-    maze->grid = load_map(av[1]);
-    if (!maze->grid) {
-        free(maze);
-        return (84);
-    }
     if (init_maze(maze)) {
         free_maze(maze);
         return (my_puterror("Map Error\n"));
@@ -77,4 +64,22 @@ int main(int ac, char **av)
         write(1, maze->grid, (maze->height + 1) * maze->width);
     }
     return (0);
+}
+
+int main(int ac, char **av)
+{
+    maze_t *maze = malloc(sizeof(maze_t));
+
+    if (!maze)
+        return (my_puterror("Malloc error\n"));
+    if (ac != 2) {
+        free(maze);
+        return (my_puterror("Argument error\n"));
+    }
+    maze->grid = load_map(av[1]);
+    if (!maze->grid) {
+        free(maze);
+        return (84);
+    }
+    return (maze_algo(maze));
 }

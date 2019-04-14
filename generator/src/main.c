@@ -28,7 +28,7 @@ static int error_handling(int ac, char **av)
 static void display_maze(maze_t *maze)
 {
     for (int i = 0; i < maze->height; i++) {
-        write(1, maze->grid[i], maze->height);
+        write(1, maze->grid[i], maze->width);
         if (i != maze->height - 1)
             write(1, "\n", 1);
     }
