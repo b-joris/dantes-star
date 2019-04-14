@@ -52,10 +52,10 @@ static int maze_algo(maze_t *maze)
         return (my_puterror("Map Error\n"));
     }
     if (check_maze_errors(maze))
-        return (my_puterror("Map Error\n"));
+        return (my_puterror("Mappp Error\n"));
     if (maze->width == 0 || maze->height == 0) {
         free_maze(maze);
-        return (my_puterror("Map error\n"));
+        return (my_puterror("Mapp error\n"));
     }
     if (solver(maze))
         printf("no solution found");
