@@ -35,7 +35,7 @@ list_t *remove_node_at_start(list_t *list)
     return (temp);
 }
 
-void free_list(list_t *list)
+list_t *free_list(list_t *list)
 {
     list_t *temp = NULL;
 
@@ -44,4 +44,5 @@ void free_list(list_t *list)
         list = list->next;
         my_free(temp);
     }
+    return (NULL);
 }

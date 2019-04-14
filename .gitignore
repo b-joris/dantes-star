@@ -5,3 +5,9 @@ vgcore*
 .DS_*
 solver
 generator
+map*
+#*#
+*~
+*.sh
+*.php
+map/

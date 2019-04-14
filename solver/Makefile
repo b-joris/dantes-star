@@ -8,8 +8,9 @@
 CC	=	gcc
 
 SRC	=	./src/main.c	\
-		./src/my_strlen.c	\
-		./src/str_word_totab.c	\
+		./src/map.c		\
+		./src/solver.c	\
+		./src/error.c
 
 OBJ	=	$(SRC:.c=.o)
 

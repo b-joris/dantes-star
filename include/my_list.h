@@ -16,6 +16,6 @@ typedef struct s_list {
 
 list_t *add_node_at_start(list_t *list, int x, int y);
 list_t *remove_node_at_start(list_t *list);
-void free_list(list_t *list);
+list_t *free_list(list_t *list);
 
 #endif /* !MY_LIST_H_ */

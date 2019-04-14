@@ -12,7 +12,6 @@
 
 #define WALL 'X'
 #define PATH '*'
-#define POS(Y, X, WIDTH) ((Y * (WIDTH + 1)) + X)
 
 enum {
     IMPERFECT = 0,
