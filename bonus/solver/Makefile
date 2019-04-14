@@ -10,7 +10,8 @@ CC	=	gcc
 SRC	=	./src/main.c	\
 		./src/map.c		\
 		./src/solver.c	\
-		./src/error.c
+		./src/error.c	\
+		./src/display.c
 
 OBJ	=	$(SRC:.c=.o)
 
@@ -18,7 +19,7 @@ NAME	=	solver
 
 CFLAGS	=	-Wall -Wextra
 
-CPPFLAGS	=	-I../include -lmy -L../lib/my
+CPPFLAGS	=	-I../include -lmy -L../lib/my -lncurses
 
 all:	$(NAME)
 

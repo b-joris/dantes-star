@@ -72,9 +72,5 @@ int main(int ac, char **av)
     }
     if (solver(maze))
         printf("no solution found");
-    else {
-        replace_chars_solved(maze);
-        write(1, maze->grid, (maze->height + 1) * maze->width);
-    }
     return (0);
 }

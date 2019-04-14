@@ -6,6 +6,7 @@
 */
 
 #include <stdlib.h>
+#include <ncurses.h>
 #include "my_pointer.h"
 #include "solver.h"
 
@@ -64,7 +65,14 @@ int solver(maze_t *maze)
     int width_max = maze->width - 1;
     int height_max = maze->height - 1;
 
+    initscr();
+    start_color();
+    init_pair(WALL, COLOR_WHITE, COLOR_WHITE);
+    init_pair(PATH, COLOR_BLUE, COLOR_BLUE);
+    init_pair(PASS, COLOR_GREEN, COLOR_GREEN);
+    init_pair(PASSED, COLOR_RED, COLOR_RED);
     while (maze->list && (maze->x != width_max || maze->y != height_max)) {
+        display_maze(maze);
         maze->grid[POS(maze->y, maze->x, maze->width)] = PASS;
         paths = check_paths(maze, &possibilities);
         if (check_possibilities(maze, possibilities)) {

@@ -37,5 +37,6 @@ int check_maze_errors(maze_t *maze);
 int count_width(char *map);
 int count_height(char *map);
 char *load_map(char *path);
+void display_maze(maze_t *maze);
 
 #endif
