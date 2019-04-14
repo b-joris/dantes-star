@@ -61,7 +61,7 @@ static int maze_algo(maze_t *maze)
         printf("no solution found");
     else {
         replace_chars_solved(maze);
-        write(1, maze->grid, (maze->height + 1) * maze->width);
+        printf("%s", maze->grid);
     }
     return (0);
 }
