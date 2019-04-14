@@ -3,9 +3,6 @@
 .vscode
 vgcore*
 .DS_*
-solver
-generator
-map*
 #*#
 *~
 *.sh
