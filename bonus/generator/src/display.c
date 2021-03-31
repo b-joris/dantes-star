@@ -6,6 +6,7 @@
 */
 
 #include <ncurses.h>
+#include <unistd.h>
 #include "generator.h"
 
 void display_maze(maze_t *maze)
